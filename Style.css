@@ -42,6 +42,7 @@ top:80px;
 @media only screen and (max-width: 600px) {
   .header h1 {
   text-align: right;
+  font-size: 30px;
 }
 .menu-con {
   	display: inline-block;
