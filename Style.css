@@ -44,6 +44,8 @@ top:80px;
   .header h1 {
   text-align: right;
   font-size: 30px;
+	  position: absolute;
+	  right: 10px;
 }
 .menu-con {
   	display: inline-block;
