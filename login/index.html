@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/png" href="Pictures\AlanWalker.jpg"/>
+
+</head>
+<body>
+<div class="backc">
+<div class="wrap-login100 animate">
+<form action="/action_page.php" method="post">
+<h2 style="text-align:left;">Login :</h2>
+    <div class="imgcontainer">
+     <img id="randomImage" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username :</b></label>
+      <input type="text" placeholder="Enter Username" name="USERNAME" required>
+
+      <label for="psw"><b>Password :</b></label>
+      <input type="password" placeholder="Enter Password" name="PASSWORD" required>
+        
+      <button type="submit">Login</button>
+      
+    </div>
+
+  </form>
+</div>
+</div>
+<script>
+var message="For security purpose, function has been disabled! Kindly Login First to ensure your Authentication";
+document.oncontextmenu=new Function("alert(message);return false")
+
+function getRandomImage() {
+	var images = ['/emoji/doremon.png', '/emoji/Pikachu.png', '/emoji/wizard.png', '/emoji/Mickey.png', '/emoji/crown.png', '/emoji/deer.png', '/emoji/flower1.png', '/emoji/phoenix.png'];
+	var image = images[Math.floor(Math.random()*images.length)];
+	
+	return image;
+}
+
+function displayRandomImage() {
+	var htmlImage = document.getElementById("randomImage");
+	htmlImage.src = getRandomImage();
+}
+displayRandomImage();
+
+</script>
+</body>
+</html>
