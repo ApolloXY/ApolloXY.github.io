@@ -84,7 +84,7 @@ img.avatar {
 @media only screen and (max-width: 600px) {
   .wrap-login100 {
 
-    width: 70%;/*30*/
+    width: 90%;/*30*/
     height: 300px;
     background: #fefdee;
     border-radius: 10px;
