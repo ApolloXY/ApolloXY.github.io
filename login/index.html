@@ -1,51 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-		<title>Login3</title>
-		<link rel="stylesheet" href="styles.css">
-		<link rel="icon" type="image/png" href="Pictures\AlanWalker.jpg"/>
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+  <body onload="WindowONLoad()">
+<div class="animate">
+      <form action="index.html" class="login-form">
+        <h1>Sign in to ApolloXY</h1>
 
-</head>
-<body>
-<div class="backc">
-<div class="wrap-login100 animate">
-<form action="/action_page.php" method="post">
-<h2 style="text-align:left;">Login :</h2>
-    <div class="imgcontainer">
-     <img id="randomImage" alt="Avatar" class="avatar">
-    </div>
-    <div class="container">
-      <label for="uname"><b>Username :</b></label>
-      <input type="text" placeholder="Enter Username" name="USERNAME" required>
-
-      <label for="psw"><b>Password :</b></label>
-      <input type="password" placeholder="Enter Password" name="PASSWORD" required>
+        <div class="input-group">
+          <input id="in" type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Username</label>
+        </div>
         
-      <button type="submit">Login</button>
-      
-    </div>
+        <div class="input-group">
+          <input type="password" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Password</label>
+        </div>
 
-  </form>
+        <input type="submit" class="logbtn" value="Login">
+
+        <div class="bottom-text">
+          Don't have account? <a href="#">Sign up</a>
+        </div>
+        <div class="bottom-text">
+        <a href="#">Terms</a> | <a href="#">Privacy</a>
+        </div>
+
+      </form>
 </div>
-</div>
-<script>
-var message="For security purpose, function has been disabled! Kindly Login First to ensure your Authentication";
-document.oncontextmenu=new Function("alert(message);return false")
 
-function getRandomImage() {
-	var images = ['/emoji/doremon.png', '/emoji/Pikachu.png', '/emoji/wizard.png', '/emoji/Mickey.png', '/emoji/crown.png', '/emoji/deer.png', '/emoji/flower1.png', '/emoji/phoenix.png'];
-	var image = images[Math.floor(Math.random()*images.length)];
-	
-	return image;
+
+      <script type="text/javascript">
+  function WindowONLoad() {
+  setTimeout(function(){  document.getElementById("in").focus(); }, 3000);
 }
+      </script>
 
-function displayRandomImage() {
-	var htmlImage = document.getElementById("randomImage");
-	htmlImage.src = getRandomImage();
-}
-displayRandomImage();
 
-</script>
-</body>
+  </body>
 </html>
