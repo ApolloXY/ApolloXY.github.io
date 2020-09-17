@@ -75,7 +75,7 @@ input:valid ~ label {
 .bar {
   position: relative;
   display:block;
-  width:315px;
+  width:265px;
 }
 
 .bar:before,
@@ -136,8 +136,6 @@ input:focus ~ .bar:after {
   text-align: center;
   font-size: 13px;
 }
-
-
 
 /* Add Zoom Animation */
 .animate {
