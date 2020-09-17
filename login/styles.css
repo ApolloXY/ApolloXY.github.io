@@ -5,28 +5,21 @@
   font-family:sans-serif;
   font: 1em sans-serif;
   
-
-}
-
-html {
-  height: 100%;
 }
 
 body{
-  min-height: 100vh;
-  height: 100%;
+  min-height: 80vh;
   background: linear-gradient(to bottom right, #ff6699 0%, #6600ff 100%) fixed;
   overflow: auto;
 }
+
 .login-form{
-  width: 300px;
+  width: 250px;
   background: #f1f1f1;
   height: 400px;
   padding: 40px 40px;
   border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 60px;
-
+  margin: 60px auto;
 }
 
 .login-form h1{
