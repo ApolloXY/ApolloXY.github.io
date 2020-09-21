@@ -136,6 +136,10 @@ input:focus ~ .bar:after {
   text-align: center;
   font-size: 13px;
 }
+img.avatar {
+  width: 75%;
+  border-radius: 0%;
+}
 
 /* Add Zoom Animation */
 .animate {
