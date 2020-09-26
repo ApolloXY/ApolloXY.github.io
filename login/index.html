@@ -7,6 +7,10 @@
    <meta name="theme-color" content="#6600ff"/>
     <link rel="icon" href="../emoji/AlanWalkerAvtar.jpg"> 
     <link rel="stylesheet" href="styles.css">
+         <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+       
  </head>
  
  <body onload="WindowONLoad()">
@@ -16,15 +20,15 @@
          <center><img src="/emoji/AlanWalkerAvtar.jpg" alt="Avatar" width="100" height="100" > </center>
             <h1>Sign in to <span class="logo1">Apollo</span><span class="logo2">XY</span></h1>
 
-              <div class="input-group">
-          <input id="in" type="text" required>
+               <div class="input-group">
+          <input id="txtEmail"  type="text" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Username</label>
         </div>
         
         <div class="input-group">
-          <input type="password" required>
+          <input id='txtPassword' type="password" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Password</label>
@@ -42,11 +46,11 @@
 
       <script type="text/javascript">
   function WindowONLoad() {
-  setTimeout(function(){  document.getElementById("in").focus(); }, 3000);
+  setTimeout(function(){  document.getElementById("txtEmail").focus(); }, 3000);
 }
       </script>
 
 
   </body>
- 
+ <script  type="text/javascript" src="script1.js"></script>
 </html>
