@@ -38,7 +38,8 @@
      var em = user.email;
      console.log(em);
      if (user != null) {
-       location.replace("https://apolloxy.github.io/home/");  
+       //location.replace("https://apolloxy.github.io/home/");  
+       window.location.assign("https://apolloxy.github.io/home/")
       alert("Signed In " + em);
       
      }
