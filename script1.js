@@ -43,9 +43,11 @@
       
      }
      }else{
-     // location.replace("https://apolloxy.github.io/login/"); 
-        location.replace("https://apolloxy.github.io/login/");  
+       if (user != null) {
+      location.replace("https://apolloxy.github.io/login/");  
         console.log("Not logged in");
+      
+     }   
       
      }
 
