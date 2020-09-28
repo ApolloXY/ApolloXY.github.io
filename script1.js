@@ -38,13 +38,15 @@
      var em = user.email;
      console.log(em);
      if (user != null) {
+       location.replace("https://apolloxy.github.io/home/");  
       alert("Signed In " + em);
-      location.replace("https://apolloxy.github.io/home/");  
+      
      }
      }else{
-     // location.replace("https://apolloxy.github.io/login/");  
+     // location.replace("https://apolloxy.github.io/login/"); 
+        location.replace("https://apolloxy.github.io/login/");  
         console.log("Not logged in");
-       location.replace("https://apolloxy.github.io/login/");  
+      
      }
 
   });
