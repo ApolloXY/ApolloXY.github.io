@@ -39,11 +39,12 @@
      console.log(em);
      if (user != null) {
       alert("Signed In " + em);
-
+      location.replace("https://apolloxy.github.io/home/");  
      }
      }else{
      // location.replace("https://apolloxy.github.io/login/");  
         console.log("Not logged in");
+       location.replace("https://apolloxy.github.io/login/");  
      }
 
   });
