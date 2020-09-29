@@ -15,8 +15,7 @@
 
   var Username, Email, firstName, lastName, Pass;
         function get(){
-          Username = document.getElementById("txtEmail").value;
-          Pass = document.getElementById("txtPass").value;
+          Username = document.getElementById("txtEmail").value
          }
  
 document.getElementById("btnLogin").onclick = function(){
