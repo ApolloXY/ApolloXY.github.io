@@ -12,7 +12,7 @@
   firebase.initializeApp(firebaseConfig);
 
   const auth = firebase.auth();
-
+bod.style.display = "none";
   function LogIn(){
 
     var email = document.getElementById('txtEmail');
@@ -42,7 +42,7 @@
      }else{
        
        window.onload = function() {
-         bod.style.display = "none";
+         
        window.location.replace("https://apolloxy.github.io/login/");
 }
          // location.replace("https://apolloxy.github.io/login/");  
