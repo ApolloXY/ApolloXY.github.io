@@ -43,13 +43,11 @@ bod.style.display = "none";
        bod.style.display = "block";
          }
      }else{
-       
-       window.onload = function() {
-         
-       window.location.replace("https://apolloxy.github.io/login/");
-}
+             console.log("Not logged in");     
+             location.replace("https://apolloxy.github.io/login/");
+
          // location.replace("https://apolloxy.github.io/login/");  
-        console.log("Not logged in");
+       
       
           
      }
