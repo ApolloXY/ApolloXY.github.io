@@ -40,8 +40,9 @@
        bod.style.display = "block";
          }
      }else{
-       bod.style.display = "none";
+       
        window.onload = function() {
+         bod.style.display = "none";
        window.location.replace("https://apolloxy.github.io/login/");
 }
          // location.replace("https://apolloxy.github.io/login/");  
