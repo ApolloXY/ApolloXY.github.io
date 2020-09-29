@@ -13,7 +13,8 @@
 
   const auth = firebase.auth();
 
-  var Username, Email, firstName, lastName, Pass;
+  var Username, Email, firstName, lastName;
+   var pass = document.getElementById('txtPassword');
         function get(){
           Username = document.getElementById("txtEmail").value
          }
@@ -24,12 +25,12 @@ document.getElementById("btnLogin").onclick = function(){
           firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
 
         var pop = snapshot.val().Email;
-         alert(pop);
+        const promise = auth.signInWithEmailAndPassword(pop, pass.value);
+        promise.catch(e => alert(e.message));
           
           });
   
-   //const promise = auth.signInWithEmailAndPassword(Email, Pass);
-    //promise.catch(e => alert(e.message));
+   
 }
 
   function LogOut(){
