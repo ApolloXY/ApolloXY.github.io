@@ -16,16 +16,16 @@
   function LogIn(){
 
     var Username = document.getElementById('txtEmail').value;
-    var pass = document.getElementById('txtPassword').value;
-    var email;
+    var Pass = document.getElementById('txtPassword').value;
+    var Email;
     
     firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
 
-         email = snapshot.val().Email;
+         Email = snapshot.val().Email;
           
           });
     
-    const promise = auth.signInWithEmailAndPassword(email, pass);
+    const promise = auth.signInWithEmailAndPassword(Email, Pass);
     promise.catch(e => alert(e.message));
     
 
@@ -46,7 +46,7 @@
      console.log(em);
      if (user != null) {
        //location.replace("https://apolloxy.github.io/home/");  
-       window.location.assign("https://apolloxy.github.io/home/")
+      window.location.assign("https://apolloxy.github.io/home/")
       alert("Signed In " + em);
       
      }
