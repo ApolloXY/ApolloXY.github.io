@@ -25,7 +25,7 @@ document.getElementById("btnLogin").onclick = function(){
           firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
 
          Email = snapshot.val().Email;
-         alert(Email)
+         alert(Email);
           
           });
   
