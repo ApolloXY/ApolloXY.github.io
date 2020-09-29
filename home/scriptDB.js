@@ -39,7 +39,10 @@
      alert("Signed In " + em);
          }
      }else{
-          location.replace("https://apolloxy.github.io/login/");  
+       window.onload = function() {
+       window.location.replace("https://apolloxy.github.io/login/");
+}
+         // location.replace("https://apolloxy.github.io/login/");  
         console.log("Not logged in");
       
           
