@@ -12,26 +12,26 @@
   firebase.initializeApp(firebaseConfig);
 
   const auth = firebase.auth();
- 
-  function LogIn(){
 
-    var Username = document.getElementById('txtEmail').value;
-    var Pass = document.getElementById('txtPassword').value;
-    var Email;
-    
-    firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
+  var Username, Email, firstName, lastName, Pass;
+        function get(){
+          Username = document.getElementById("txtEmail").value;
+          Pass = document.getElementById("txtPass").value;
+         }
+ 
+document.getElementById("btnLogin").onclick = function(){
+
+          get();
+          firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
 
          Email = snapshot.val().Email;
          alert(Email)
           
           });
-    
-    const promise = auth.signInWithEmailAndPassword(Email, Pass);
-  //  promise.catch(e => alert(e.message));
-    
-
-    
-  }
+  
+   //const promise = auth.signInWithEmailAndPassword(Email, Pass);
+    //promise.catch(e => alert(e.message));
+}
 
   function LogOut(){
 
