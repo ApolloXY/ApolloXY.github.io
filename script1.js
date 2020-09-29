@@ -23,7 +23,9 @@ document.getElementById("btnLogin").onclick = function(){
 
           get();
           firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
-
+        if(!snapshot.val()){
+              alert("No Username Found !");
+          }
         var pop = snapshot.val().Email;
         const promise = auth.signInWithEmailAndPassword(pop, pass.value);
         promise.catch(e => alert(e.message));
