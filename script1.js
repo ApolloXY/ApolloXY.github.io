@@ -12,13 +12,20 @@
   firebase.initializeApp(firebaseConfig);
 
   const auth = firebase.auth();
-
+ 
   function LogIn(){
 
-    var email = document.getElementById('txtEmail');
-    var pass = document.getElementById('txtPassword');
+    var Username = document.getElementById('txtEmail').value;
+    var pass = document.getElementById('txtPassword').value;
+    var email;
+    
+    firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
 
-    const promise = auth.signInWithEmailAndPassword(email.value, pass.value );
+         email = snapshot.val().Email;
+          
+          });
+    
+    const promise = auth.signInWithEmailAndPassword(email, pass);
     promise.catch(e => alert(e.message));
     
 
