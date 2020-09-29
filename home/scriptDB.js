@@ -39,15 +39,13 @@ bod.style.display = "none";
      var em = user.email;
      console.log(em);
      if (user != null) {
-     alert("Signed In " + em);
+       
        bod.style.display = "block";
+       document.getElementById("myName").innerHTML = "Welcome " + em +" ! :)";
          }
      }else{
              console.log("Not logged in");     
              location.replace("https://apolloxy.github.io/login/");
-
-         // location.replace("https://apolloxy.github.io/login/");  
-       
       
           
      }
