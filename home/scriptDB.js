@@ -30,15 +30,17 @@
     alert("Signed Out");
   }
   
-
+ var bod = document.getElementById("myBody");
   auth.onAuthStateChanged(function(user) {
     if(user){
      var em = user.email;
      console.log(em);
      if (user != null) {
      alert("Signed In " + em);
+       bod.style.display = "block";
          }
      }else{
+       bod.style.display = "none";
        window.onload = function() {
        window.location.replace("https://apolloxy.github.io/login/");
 }
