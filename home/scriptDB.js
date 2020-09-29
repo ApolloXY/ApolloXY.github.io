@@ -12,7 +12,10 @@
   firebase.initializeApp(firebaseConfig);
 
   const auth = firebase.auth();
+
+var bod = document.getElementById("myBody");
 bod.style.display = "none";
+
   function LogIn(){
 
     var email = document.getElementById('txtEmail');
@@ -30,7 +33,7 @@ bod.style.display = "none";
     alert("Signed Out");
   }
   
- var bod = document.getElementById("myBody");
+
   auth.onAuthStateChanged(function(user) {
     if(user){
      var em = user.email;
