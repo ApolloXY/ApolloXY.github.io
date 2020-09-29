@@ -22,11 +22,12 @@
     firebase.database().ref('Email/'+ Username).on('value', function(snapshot){
 
          Email = snapshot.val().Email;
+         alert(Email)
           
           });
     
     const promise = auth.signInWithEmailAndPassword(Email, Pass);
-    promise.catch(e => alert(e.message));
+  //  promise.catch(e => alert(e.message));
     
 
     
