@@ -41,7 +41,20 @@ bod.style.display = "none";
      if (user != null) {
        
        bod.style.display = "block";
-       document.getElementById("myName").innerHTML = "Welcome " + em +" ! :)";
+        firebase.database().ref('UserData/'+ Username).on('value', function(snapshot){
+           
+           if(!snapshot.val()){
+             alert("No Username Found !");
+         }
+        
+        // document.getElementById('Fname').value = snapshot.val().FirstName;
+        // document.getElementById('Lname').value = snapshot.val().LastName;
+           document.getElementById("myName").innerHTML = "Welcome " + snapshot.val().FirstName +" ! :)";
+         
+
+       
+         });
+      
          }
      }else{
              console.log("Not logged in");     
