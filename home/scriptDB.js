@@ -32,7 +32,18 @@ bod.style.display = "none";
     auth.signOut();
     alert("Signed Out");
   }
-  
+  var nam;
+firebase.database().ref('UserData/'+ Username).on('value', function(snapshot){
+           
+           if(!snapshot.val()){
+             alert("No Username Found !");
+         }
+        
+        // document.getElementById('Fname').value = snapshot.val().FirstName;
+        // document.getElementById('Lname').value = snapshot.val().LastName;
+          // document.getElementById("myName").innerHTML = "Welcome " + snapshot.val().FirstName + " ! :)";
+  nam = snapshot.val().FirstName;
+          });
 
   auth.onAuthStateChanged(function(user) {
     if(user){
@@ -41,19 +52,8 @@ bod.style.display = "none";
      if (user != null) {
        
        bod.style.display = "block";
-        firebase.database().ref('UserData/'+ Username).on('value', function(snapshot){
-           
-           if(!snapshot.val()){
-             alert("No Username Found !");
-         }
+       document.getElementById("myName").innerHTML = "Welcome " + nam + " ! :)";
         
-        // document.getElementById('Fname').value = snapshot.val().FirstName;
-        // document.getElementById('Lname').value = snapshot.val().LastName;
-           document.getElementById("myName").innerHTML = "Welcome " + snapshot.val().FirstName +" ! :)";
-         
-
-       
-         });
       
          }
      }else{
