@@ -59,7 +59,7 @@ firebase.database().ref('UserData/'+ unam).on('value', function(snapshot){
           // document.getElementById("myName").innerHTML = "Welcome " + snapshot.val().FirstName + " ! :)";
   nam = snapshot.val().FirstName;
           });
-       document.getElementById("myName").innerHTML = "Welcome " + nam + " ! :)";
+       document.getElementById("myName").innerHTML = "Welcome " + unam + " ! :)";
         
       
          }
