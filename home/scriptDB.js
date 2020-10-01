@@ -32,7 +32,12 @@ bod.style.display = "none";
     auth.signOut();
     alert("Signed Out");
   }
- 
+ var params = getParams();
+var unam = unescape(params["username"]);
+if(unam=="" ||unam == null || unam == "undefined"){
+
+    unam = "User";
+}
 
   auth.onAuthStateChanged(function(user) {
     if(user){
@@ -41,13 +46,7 @@ bod.style.display = "none";
      if (user != null) {
        
        bod.style.display = "block";
-       var params = getParams();
-var unam = unescape(params["username"]);
-if(unam=="" ||unam == null || unam == "undefined"){
-
-    unam = "User";
-}
-        var nam;
+       var nam;
 firebase.database().ref('UserData/'+ unam).on('value', function(snapshot){
            
            if(!snapshot.val()){
@@ -58,8 +57,9 @@ firebase.database().ref('UserData/'+ unam).on('value', function(snapshot){
         // document.getElementById('Lname').value = snapshot.val().LastName;
           // document.getElementById("myName").innerHTML = "Welcome " + snapshot.val().FirstName + " ! :)";
   nam = snapshot.val().FirstName;
+    document.getElementById("myName").innerHTML = "Welcome " + nam + " ! :)";
           });
-       document.getElementById("myName").innerHTML = "Welcome " + unam + " ! :)";
+     
         
       
          }
