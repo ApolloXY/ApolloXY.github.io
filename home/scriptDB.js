@@ -32,8 +32,23 @@ bod.style.display = "none";
     auth.signOut();
     alert("Signed Out");
   }
-  var nam;
-firebase.database().ref('UserData/'+ Username).on('value', function(snapshot){
+ 
+
+  auth.onAuthStateChanged(function(user) {
+    if(user){
+     var em = user.email;
+     console.log(em);
+     if (user != null) {
+       
+       bod.style.display = "block";
+       var params = getParams();
+var unam = unescape(params["username"]);
+if(unam=="" ||unam == null || unam == "undefined"){
+
+    unam = "User";
+}
+        var nam;
+firebase.database().ref('UserData/'+ unam).on('value', function(snapshot){
            
            if(!snapshot.val()){
              alert("No Username Found !");
@@ -44,14 +59,6 @@ firebase.database().ref('UserData/'+ Username).on('value', function(snapshot){
           // document.getElementById("myName").innerHTML = "Welcome " + snapshot.val().FirstName + " ! :)";
   nam = snapshot.val().FirstName;
           });
-
-  auth.onAuthStateChanged(function(user) {
-    if(user){
-     var em = user.email;
-     console.log(em);
-     if (user != null) {
-       
-       bod.style.display = "block";
        document.getElementById("myName").innerHTML = "Welcome " + nam + " ! :)";
         
       
@@ -64,3 +71,21 @@ firebase.database().ref('UserData/'+ Username).on('value', function(snapshot){
      }
 
   });
+
+function getParams() {
+
+    
+var params = {},
+
+    pairs = document.URL.split('?')
+           .pop()
+           .split('&');
+    
+
+for (var i = 0, p; i < pairs.length; i++) {
+       p = pairs[i].split('=');
+       params[ p[0] ] =  p[1];
+}     
+
+return params;
+}
