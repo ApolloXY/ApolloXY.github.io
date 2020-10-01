@@ -49,7 +49,8 @@ document.getElementById("btnLogin").onclick = function(){
      console.log(em);
      if (user != null) {
        //location.replace("https://apolloxy.github.io/home/");  
-      window.location.assign("https://apolloxy.github.io/home/")
+          get();
+      window.location.assign("https://apolloxy.github.io/home" + "?="+ "username=" + "Username" )
       alert("Signed In " + em);
       
      }
