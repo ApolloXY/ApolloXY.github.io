@@ -1,3 +1,6 @@
+#myBody {
+  display: none;
+}
 #loader {
   position: absolute;
   left: 50%;
