@@ -8,13 +8,14 @@
 <link rel="icon" href="../emoji/AlanWalkerAvtar.jpg"> 
 <link rel="stylesheet" href="navi.css">
 <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="loader.css">
   
   <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
 </head>
 
-<body id="myBody">
+<body onload="Loader()" id="myBody">
 
 
 <div class="header">
@@ -66,7 +67,14 @@
 </div>
 
 <script>
-  
+  function Loader() {
+  var yVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
   </script>
 
 </body>
