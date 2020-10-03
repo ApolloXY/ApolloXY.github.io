@@ -1,6 +1,6 @@
-function Loader() {
-  var yVar = setTimeout(showPage, 2000);
-}
+//function Loader() {
+//  var yVar = setTimeout(showPage, 2000);
+//}
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
