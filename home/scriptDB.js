@@ -14,7 +14,7 @@
   const auth = firebase.auth();
 
 var bod = document.getElementById("myBody");
-bod.style.display = "none";
+//bod.style.display = "none";
 
   function LogIn(){
 
@@ -41,7 +41,8 @@ bod.style.display = "none";
        console.log(uid);
      if (user != null) {
        
-       bod.style.display = "block";
+       //bod.style.display = "block";
+       var yVar = setTimeout(showPage, 2000);
        var nam;
 firebase.database().ref('UserData/'+ uid).on('value', function(snapshot){
            
