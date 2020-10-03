@@ -38,6 +38,7 @@ bod.style.display = "none";
      var em = user.email;
      var uid = user.uid;
      console.log(em);
+       console.log(uid);
      if (user != null) {
        
        bod.style.display = "block";
