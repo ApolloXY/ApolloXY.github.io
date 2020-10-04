@@ -6,7 +6,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 .header {
   position: fixed;
-  /* height: 80px;*/
+   height: 80px;
   top: 0;
   z-index: 1;
   width: 100%;
