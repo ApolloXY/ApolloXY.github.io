@@ -7,7 +7,7 @@ function myFunction() {
   var scrolled = ((winScroll * 1.1) / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
  
-  var Hshadow = document.getElementById("header");
+  var Hshadow = document.getElementById("head");
    
   if (winScroll > 1) {
   Hshadow.classList.add("Hactive");
