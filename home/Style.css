@@ -11,7 +11,10 @@ font-family: Arial, Helvetica, sans-serif;
   z-index: 1;
   width: 100%;
   background-color: #70eaff;
-box-shadow: 0px 7px 10px 0px rgba(74,96,240,0.75);
+
+}
+.header.active {
+     box-shadow: 0px 7px 10px 0px rgba(74,96,240,0.75);  
 }
 
 .header h1 {text-align: center;}
