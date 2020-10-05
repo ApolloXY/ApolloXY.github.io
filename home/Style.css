@@ -43,6 +43,12 @@ top:80px;
   width: 90%;
 }
 @media only screen and (max-width: 600px) {
+	
+	
+#logo { padding:10px; width:auto; float:center; z-index: 1010;}
+#logo h1 a, h1 { color:darkblue; text-decoration:none;}
+#logo h1 span { color:#ff0077;}
+
   .header h1 {
   text-align: center;
   font-size: 30px;
