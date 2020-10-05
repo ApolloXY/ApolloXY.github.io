@@ -10,8 +10,8 @@ function myFunction() {
   var Hshadow = document.getElementById("header");
    
   if (winScroll > 1) {
-  Hshadow.classList.add("active");
+  Hshadow.classList.add("Hactive");
   }else{
-   Hshadow.classList.remove("active");
+   Hshadow.classList.remove("Hactive");
   }
 }
