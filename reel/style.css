@@ -1,0 +1,70 @@
+body{
+  background-color:#b9bcc9;
+  user-select:none;
+}
+.container {
+  width:100%;
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:0px;
+  border-radius:18px;
+  height:500px;
+  text-align:center;
+  padding:1px;
+  font-weight:lighter;
+  color:#fff;
+  background: #f09433; background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); 
+}
+h1{
+  font-weight:lighter;
+  border-bottom:1px solid #ac98ac;
+  width:auto;
+}
+.btn{
+  outline:none;
+  width:auto;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+  background: transparent;
+  text-align:center;
+  margin-top:40px;
+  font-size:20.8px;
+  border:none;
+  opacity:0;
+  font-weight:lighter;
+  border-radius:10px;
+  height:auto;
+  box-shadow: 3px 5px 10px #915656;
+  color:#fff;
+}
+#text{
+  font-weight:lighter;
+  padding-top:57px;
+  text-shadow:0 0 7px #ac98ac,0 0 40px;
+}
+input,button{
+  padding:5px;
+  margin:5px;
+  background-color:transparent;
+  color:#fff;
+  border:1px dashed #dedede;
+  outline:none;
+  font-weight:lighter;
+}
+#check{
+  border:1px solid;
+}
+a{
+  color:#fff;
+  margin:5px;
+  text-shadow:0 0 1px #fff900,0 0 2px;
+  font-size:20px;
+  font-weight:lighter;
+  text-decoration:none;
+}
+input::placeholder {
+color: #fff; 
+font-style: italic; 
+}
