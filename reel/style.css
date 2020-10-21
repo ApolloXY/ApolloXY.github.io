@@ -1,70 +1,140 @@
-body{
-  background-color:#b9bcc9;
-  user-select:none;
+
+/*---------- BODY --------------------------------*/
+*{
+  padding: 0;
+  margin: 0;
+  }
+  
+  body {
+    background: #f09433; background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); 
+    margin: 0;
+    padding: 0;
+    margin-bottom: 150px;
+   
+  }
+
+  .container{
+     width: auto;
+    height: 100%;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 20px;
+
+  }
+  .header{
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+  }
+  
+  form{
+   padding: 30px; 
+   text-align: center;
+  }
+
+  input {
+    display: inline-block;
+    width: 300px;
+    height: 20px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    background: #f3f3f3;
+    border-color: #ff0080;
+    color: #212121;
+    transition: all 500ms ease;
+  }
+  input:focus, input:hover {
+    border-color: #208bfd;
+    transition: all 500ms ease;
+  }
+
+  button{
+    background-color: rgb(61, 128, 252);
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px
+  }
+  .img-con{
+
+    position: relative;;
+    margin: 0 auto;
 }
-.container {
-  width:100%;
-  margin-left:0px;
-  margin-top:0px;
-  margin-right:0px;
-  border-radius:18px;
-  height:500px;
-  text-align:center;
-  padding:1px;
-  font-weight:lighter;
-  color:#fff;
-  background: #f09433; background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); 
-}
-h1{
-  font-weight:lighter;
-  border-bottom:1px solid #ac98ac;
-  width:auto;
-}
-.btn{
-  outline:none;
-  width:auto;
-  padding-left:15px;
-  padding-right:15px;
-  padding-top:10px;
-  padding-bottom:10px;
-  background: transparent;
-  text-align:center;
-  margin-top:40px;
-  font-size:20.8px;
-  border:none;
-  opacity:0;
-  font-weight:lighter;
-  border-radius:10px;
-  height:auto;
-  box-shadow: 3px 5px 10px #915656;
-  color:#fff;
-}
-#text{
-  font-weight:lighter;
-  padding-top:57px;
-  text-shadow:0 0 7px #ac98ac,0 0 40px;
-}
-input,button{
-  padding:5px;
-  margin:5px;
-  background-color:transparent;
-  color:#fff;
-  border:1px dashed #dedede;
-  outline:none;
-  font-weight:lighter;
-}
-#check{
-  border:1px solid;
-}
-a{
-  color:#fff;
-  margin:5px;
-  text-shadow:0 0 1px #fff900,0 0 2px;
-  font-size:20px;
-  font-weight:lighter;
-  text-decoration:none;
-}
-input::placeholder {
-color: #fff; 
-font-style: italic; 
-}
+  .image {
+    display: block;
+    width: 120px;
+    height: 180px;
+    padding-top: 15px;
+    padding-left: 0px;
+    margin: 0 auto;
+    
+  }
+  .frame {
+    display: block;
+    width: 150px;
+    height: 210px;
+    margin: 0 auto;
+  }
+  .center{
+    text-align: center;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    background-color: transparent;
+  }
+
+  .btn{
+    outline:none;
+    width:auto;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background: transparent;
+    text-align:center;
+    margin-top:40px;
+    font-size:20.8px;
+    border:none;
+    opacity:0;
+    font-weight:lighter;
+    border-radius:10px;
+    height:auto;
+    box-shadow: 3px 5px 10px #915656;
+    color:#fff;
+  }
+  #text{
+    font-weight:lighter;
+    padding-top:57px;
+    text-shadow:0 0 7px #ac98ac,0 0 40px;
+  }
+
+  #check{
+    border:1px solid;
+  }
+  form a{
+    color:#fff;
+    margin:5px;
+    text-shadow:0 0 1px #fff900,0 0 2px;
+    font-size:20px;
+    font-weight:lighter;
+    text-decoration:none;
+  }
+  input::placeholder {
+  color: #000; 
+  font-style: italic; 
+  }
+  
+  .steps{
+    padding: 20px;
+    text-align: left;
+  }
