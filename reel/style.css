@@ -11,6 +11,8 @@
     padding: 0;
     margin-bottom: 150px;
     font-family: "Lato", sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .container{
@@ -125,7 +127,7 @@
   form a{
     color:#fff;
     margin:5px;
-    text-shadow:0 0 1px #fff900,0 0 2px;
+    text-shadow:0 0 4px #fff900,0 0 5px;
     font-size:20px;
     font-weight:lighter;
     text-decoration:none;
