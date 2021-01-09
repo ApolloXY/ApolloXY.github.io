@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>ApolloXY</title>
-<meta name="theme-color" content="#348feb"/>
-<link rel="icon" href="../emoji/AlanWalkerAvtar.jpg"> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+
 </head>
 
 <body>
-   <div id="con1">
+  
+    <div id="con1">
 
         <div id="con2">
             <div id="logo">
                 <h1>Apollo<span>XY</span></h1>
                 <p>A Personlized Website !</p>    
             </div>
-    
+
         </div>
         
         <div id="con3-button">
-          <a href="/login"><button class="button">Login</button></a> 
-          <a href="/signup"><button class="button">Sign Up</button></a>
+            <a href="/login"><button class="button">Login</button></a> 
+            <a href="/signup"><button class="button">Sign Up</button></a>
         </div>
 
         <div id="chat-con">
@@ -36,32 +34,36 @@
                
                 </div>
             </div>
-            <div id="chat-mess-con">
-                <div id="chat-messages">
-                    <div class="chat-mess-us1"><p>Enter your ticket.</p></div>
-                    <div class="chat-mess-us2"><p>Hello!</p></div>
-                    
-                </div>
-                <div id="con-send">
-                    <input id="message-input" placeholder="Type..." >
-                    <button type="submit" >Send</button>
-                </div>
-                
-            </div>
-        </div>
-       
-        
 
             
-       
-       
-        
-    
-      
-    </div>
-<script>
-//location.replace("https://apolloxy.github.io/home/");  
-</script>
 
+            <div id="chat-mess-con">
+                
+                <div id="chat-message-list">
+                    <div id="chat-messages">
+                 
+                        <div class="message-row user1"><p class="message-text">Enter your ticket.</p></div>
+                        <div class="message-row user2"><p class="message-text">Hello</p></div>
+                   
+                   
+                    </div>
+                </div>
+               
+                
+                <div id="con-send">                    
+                    <textarea id="message-input" rows="1" placeholder="Type..."></textarea>
+                    <button type="submit" onclick="sent()">Send</button>
+                   
+                </div>
+                
+                
+            </div>
+            <div id="tip"><p>Tip: SignUp to get Ticket.</p></div>
+        </div>
+       
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
