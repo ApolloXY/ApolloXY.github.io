@@ -2,7 +2,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     document.getElementById("nav-log").style.padding = "40px";
     document.getElementById("nav-log").style.fontSize = "50px";
 
-    document.getElementById("user-nav").style.fontSize = "50px";
+    document.getElementById("user-nav").style.fontSize = "70px";
+    document.getElementById("nav-dec").style.backgroundImage = "repeating-linear-gradient(to right, transparent 0px, transparent 30px, 0px, #5bd1ff 60px)";
 
     document.getElementById("terminalReslutsCont").style.position = "absolute";
     document.getElementById("terminalReslutsCont").style.top = "150px";
@@ -19,6 +20,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     document.getElementById("nav-log").style.fontSize = "20px";
 
     document.getElementById("user-nav").style.fontSize = "20px";
+    document.getElementById("nav-dec").style.backgroundImage = "repeating-linear-gradient(to right, transparent 0px, transparent 5px, 0px, #5bd1ff 10px)";
 
     document.getElementById("terminalReslutsCont").style.position = "absolute";
     document.getElementById("terminalReslutsCont").style.top = "100px";
