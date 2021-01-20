@@ -9,7 +9,7 @@ html,body {
       margin: 0;
       padding: 0;
       font-family: "Lato", sans-serif;
-      overflow: hidden;
+      overflow: auto;
   
       
 }
@@ -100,7 +100,7 @@ font-size: 40px;
   bottom: 100px;
   width:100%;
   padding: 15px;
-  overflow-y:scroll;
+  overflow-y:auto;
   overflow-x:hidden;
   font-size: 30px;
   line-height: 50px;
