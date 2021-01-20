@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
  
   // Scrtoll to the bottom of the results div
   var scrollToBottomOfResults = function(){
-    var terminalResultsDiv = document.getElementById('terminalReslutsCont');
+    var terminalResultsDiv = document.getElementById('content');
     terminalResultsDiv.scrollTop = terminalResultsDiv.scrollHeight;
   }
  
