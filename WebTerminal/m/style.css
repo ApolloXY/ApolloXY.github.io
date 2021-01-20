@@ -43,6 +43,7 @@ html,body {
   right: 0;
   background-color: #000;
   overflow-y:scroll;
+  overflow-x:hidden;
   padding-right: 17px;
   font-family: 'Roboto Mono', monospace;
   width: 100%;
@@ -58,10 +59,9 @@ html,body {
 }
   
 #terminalReslutsCont{
-  overflow-x:hidden;
   width:90%;
   padding: 15px;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 50px;
   display: block;
   color: rgba(255,255,255,0.9);
@@ -122,17 +122,17 @@ font-family: 'Roboto Mono', monospace;
   font-size: 60px;
 }
 #user-nav #a{
-  color: rgb(0, 0, 255);
+  color: rgb(0, 255, 0);
 }
 
 #user-nav #b{
-  color: rgb(235, 186, 28);
+  color: rgb(255, 255, 0);
 }
 
 #user-nav #c{
-  color: rgb(0, 255, 21);
+  color: rgb( 0, 255, 255);
 }
 #user-nav #d{
-  color: rgb(255, 0, 0);
+  color: rgb( 0, 0, 255);
   font-size: 62px;
 }
