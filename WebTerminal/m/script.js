@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var scrollToBottomOfResults = function(){
     var terminalResultsDiv = document.getElementById('content');
     terminalResultsDiv.scrollTop = terminalResultsDiv.scrollHeight;
+    document.getElementById("terminalReslutsCont").style.fontSize = "40px";
   }
  
   // Scroll to the bottom of the results
