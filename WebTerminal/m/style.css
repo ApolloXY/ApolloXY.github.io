@@ -95,7 +95,7 @@ font-size: 40px;
 #terminalReslutsCont{
   position: absolute;
   top: 270px;
-  bottom: 100px;
+  bottom: 120px;
   width:90%;
   padding: 15px;
   overflow-y:scroll;
