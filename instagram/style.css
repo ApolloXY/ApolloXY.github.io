@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+    
+html,body {
+    background-color:#ff00ff;
+    padding:0px;
+    margin:0px;
+    width:100%;
+    height:100%;
+    overflow:hidden;        
+    font-family: "Lato", sans-serif;
+           
+}
+
+#main-container{
+    background: #698ae9;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+
+#logo-con{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    position: relative;
+    top: 70px;
+  
+}
+
+
+#logo { 
+   
+    padding:10px; 
+    position: absolute;
+    font-size: 35px;
+   
+  
+}
+#logo h1 { 
+    color:#ffffff; 
+    text-decoration:none;
+    text-shadow: 2px 3px rgba(0,0,0,0.4);
+}
+#logo h1 span { 
+    
+    float: left;
+}
+
+
+#main{
+position: relative;
+display:none;
+animation: animatebottom 1.7s;
+
+
+}
+#sub {
+position: relative;
+display:none;
+animation: animateright 0.7s normal forwards ease-in-out;
+color:#00ffff;
+}
+
+#sub2{
+    color:#ffff;
+position: relative;
+display:none;
+animation: animateleft 0.7s normal forwards ease-in-out;
+}
+
+@keyframes animatebottom { 
+from{ bottom:500px; opacity:0 } 
+to{ bottom:0px; opacity:1 }
+}
+
+@keyframes animateright { 
+from{ left:-20px; opacity:0 } 
+to{ left:0px; opacity:1 }
+}
+@keyframes animateleft { 
+    from{ right:-20px } 
+    to{ right:0px }
+}
+
+
+  @keyframes fade { 
+    from{ opacity: 0; } 
+    to{ opacity: 1; }
+}
+
+#container{
+    animation: fade 1.5s normal forwards ease-in-out;
+    position: relative;
+    background-color: #ffff;
+    margin: 40px auto;
+    height: fit-content;
+    width: 60%;
+    min-width: 300px;
+    border-radius: 5px;
+    padding: 20px 0 100px;
+       
+    
+}
+#container #head{
+    padding: 15px 0 0;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #ff00a2);
+
+}
+#container #head h2{
+    font-family:"Source Sans Pro", sans-serif;
+    font-size:26px;
+    font-weight:300;
+    line-height:1.65;
+    
+}
+
+#container #in{
+    display: flex;
+    justify-content: center;
+}
+
+#container #in input{
+    margin: 40px auto 10px;
+    padding: 20px;
+    font-size: 17px;
+    width: 50%;
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    
+}
+
+#container #in input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#container #dn{
+    display: flex;
+    justify-content: center;
+    
+}
+#container #dn button{
+    background-image: linear-gradient(to bottom right, #33ccff 0%, #00ff99 100%);
+    border: none;
+    border-radius: 05px;
+    color: #ffff;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+#container #dn button:hover{
+    
+    background-image: linear-gradient(to top left, #33ccff 0%, #00ff99 100%);
+
+}
+
+
+
+ .result{
+    display: flex;
+    justify-content: center;
+
+  }
+ .result video, .result img {
+    width: 300px;
+    min-width: 200px;
+    margin: 2em;
+
+  }
+  @media only screen and (max-width: 800px) {
+    #container #head h2{
+        font-size:16px;
+    }
+    #container #in input{
+    
+        padding: 10px;
+        font-size: 15px;
+        width: 60%;
+       
+    }
+  
+    #container #dn button{
+        font-size: 15px;
+        padding: 10px 20px;
+
+    }
+
+    
+  }
+
+ 
+  
+  
+
