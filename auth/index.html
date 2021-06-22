@@ -1,0 +1,79 @@
+<!DOCTYPE html>  
+ <html lang="en">  
+ <head>  
+   <meta charset="UTF-8">  
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>ApolloXY Auth</title>  
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
+ </head>  
+ <body>  
+   <form autocomplete="off" method="post" id="form">  
+     <label for="password">New Password</label>  
+     <input type="password" name="password" id="password">  
+     <label for="password_confirmation">Confirm Password</label>  
+     <input type="password" name="password_confirmation" id="password_confirmation">  
+     <button type="submit" id="submit">Submit</button>  
+   </form>  
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>   
+    <script>   
+     document.addEventListener('DOMContentLoaded', function() {   
+     var mode = fetchParamsbyUrl('mode');   
+     var actionCode = fetchParamsbyUrl('oobCode');   
+     var continueUrl = fetchParamsbyUrl('continueUrl');   
+     var lang = fetchParamsbyUrl('lang') || 'en';   
+     var apiKey = fetchParamsbyUrl('apiKey');   
+     var config = {   
+       'apiKey': apiKey   
+     };   
+     var app = firebase.initializeApp(config);   
+     var auth = app.auth();   
+     switch (mode) {   
+       case 'resetPassword':   
+       // Display reset password handler and UI.   
+       handleResetPassword(auth, actionCode, continueUrl, lang);   
+       break;   
+       case 'recoverEmail':   
+       // Display email recovery handler and UI.   
+       handleRecoverEmail(auth, actionCode, lang);   
+       break;   
+       case 'verifyEmail':   
+       // Display email verification handler and UI.   
+       handleVerifyEmail(auth, actionCode, continueUrl, lang);   
+       break;   
+       default:   
+       // Error: invalid mode.   
+     }   
+     }, false);   
+     function fetchParamsbyUrl(name, url) {   
+       if (!url) url = window.location.href;   
+       name = name.replace(/[\[\]]/g, '\\$&');   
+       var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),   
+       results = regex.exec(url);   
+       if (!results) return null;   
+       if (!results[2]) return '';   
+       return decodeURIComponent(results[2].replace(/\+/g, ' '));   
+     }   
+     function handleResetPassword(auth, actionCode, continueUrl, lang) {   
+     var accountEmail;   
+     // Verify the password reset code is valid.   
+     auth.verifyPasswordResetCode(actionCode).then(function(email) {   
+       var accountEmail = email;   
+       //SUCCESS: URL VERIFIED   
+       // NOW TODO: Show the reset screen with the user's email and ask the user for   
+       // the new password.   
+     }).catch(function(error) {   
+     //ERROR: INVALID CODE OR EXPIRED   
+     });   
+     }   
+     $("#submit").click(function() {  
+       auth.confirmPasswordReset(actionCode, $("#password").val()).then(function(resp) {   
+         // Password reset has been confirmed and new password updated.   
+       }).catch(function(error) {   
+         // Error occurred during confirmation. The code might have expired or the   
+         // password is too weak.   
+       });   
+     });  
+     </script>   
+ </body>  
+ </html>  
