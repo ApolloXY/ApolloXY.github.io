@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Auth - v1</title>
+    <link rel="stylesheet" href="index.css">
+  
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+  
+</head>
+<body>
+    <div>
+        <h2>Login/SignUp</h2>
+        <input type="text" value="fake1@zetmail.com" id="txtEmail">
+        <input type="text" value="pokemon05" id="txtPassword">
+        <br>  <br>
+        <button id="btnLogin">Login</button>
+        <button id="btnSignUp">SignUp</button>
+        <button id="btnLogout">Logout</button>
+        <br><br>
+        <button id="btnGoogleLogin">Google</button>
+        <button id="btnFacebookLogin">Facebook</button>
+        <button id="btnTwitterLogin">Twitter</button>
+        <h2>Logged</h2>
+        <button id="btnVerifyEmail">Verify Email</button>
+        <button id="btnResetPass">Reset Password</button>
+        <br><br>
+        <label for="dName">Display Name</label>
+        <input type="text" value="Asp" id="dName">
+        <br>
+        <label for="dImage">Picture URL</label>
+        <input type="text" value="https://www.url.com/pic.png" id="dImage">
+        <br>
+        <button id="btnUdtProfile">Update Profile</button>
+        <br><br>
+        <label for="cEmail">New Email</label>
+        <input type="text" id="cEmail">
+        <button id="btncEmail">ChangeEmail</button>
+        <br>
+        <label for="cPass">New Password</label>
+        <input type="text" id="cPass">
+        <button id="btncPass">Change Password</button>
+        <br><br>   <br><br>
+        <button id="deleteACC">Delete Account</button>
+
+    </div>
+    
+</body>
+<script src="index.js"></script>
+
+</html>
