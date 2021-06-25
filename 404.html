@@ -20,7 +20,10 @@ body {
 </style>
 </head>
 <body>
+    <h1 id="demo"></h1>
+    
 <script>
+document.getElementById("demo").innerHTML = window.location.pathname;
 console.log(window.location.pathname);
 document.title = window.location.pathname;
 </script>
