@@ -23,9 +23,27 @@ body {
     <h1 id="demo"></h1>
     
 <script>
-document.getElementById("demo").innerHTML = window.location.pathname;
-console.log(window.location.pathname);
-document.title = window.location.pathname;
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+
+  var path = "/@hello"; 
+  path = path.slice(1, 50);
+  var n = path.search("/");
+  var m = path.slice(n+1, 50);
+  var p = path.slice(1, 50).includes('@');
+  var username = path.slice(1, path.length-1);
+
+
+    document.getElementById("demo").innerHTML = username;
+    
+  if(!p && m=='' || n==-1){
+  
+ window.location.replace("https://apolloxy.github.io/?u=" + username);
+  }else{
+  window.location.replace("https://www.w3schools.com/login");
+  }
+  
+});
 </script>
 
 </body>
