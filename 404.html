@@ -1,46 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Not Found</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-html {
-    height: 100%;
-    margin: 0;
-}
-body {
-    background-image: url("https://apolloxy.github.io/notfound3.jpg");
-    padding-bottom: 1.2rem;
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}  
 
-</style>
-</head>
 <body>
-    <h1 id="demo"></h1>
-    
 <script>
 window.addEventListener('load', (event) => {
-  console.log('page is fully loaded');
 
-  var path = "/@hello"; 
+  var path = window.location.pathname; 
   path = path.slice(1, 50);
   var n = path.search("/");
   var m = path.slice(n+1, 50);
   var p = path.slice(1, 50).includes('@');
-  var username = path.slice(1, path.length-1);
+  var q = path.slice(0, 1);
+  var username = path.slice(1, path.length);
 
-
-    document.getElementById("demo").innerHTML = username;
-    
-  if(!p && m=='' || n==-1){
-  
- window.location.replace("https://apolloxy.github.io/?u=" + username);
+  if(m=='' || n==-1){
+  if(!p && q=="@"){
+   window.location.replace("https://apolloxy.github.io/?=" + username);
   }else{
-  window.location.replace("https://www.w3schools.com/login");
+   window.location.replace("https://apolloxy.github.io/notFound);
+  }
+  }else{
+window.location.replace("https://apolloxy.github.io/notFound.html);
+
   }
   
 });
