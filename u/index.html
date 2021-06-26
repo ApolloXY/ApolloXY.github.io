@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Username: <span id="user-id"></span></h1>
+<script>
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const user = urlParams.get('u')
+document.getElementById("user-id").innerHTML = user;
+window.history.pushState('', "@" + user , 'https://apolloxy.github.io/@' + user);
+
+console.log(user);
+</script>
+</body>
+</html>
