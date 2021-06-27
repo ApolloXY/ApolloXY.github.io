@@ -4,26 +4,25 @@
 <body>
 <script>
 window.addEventListener('load', (event) => {
-
-  var path = window.location.pathname; 
+var path = window.location.pathname; 
   path = path.slice(1, 50);
-  var n = path.search("/");
-  var m = path.slice(n+1, 50);
-  var p = path.slice(1, 50).includes('@');
-  var q = path.slice(0, 1);
-  var username = path.slice(1, path.length);
-
-  if(m=='' || n==-1){
-  if(!p && q=="@"){
-   window.location.replace("https://apolloxy.github.io/u/?u=" + username);
-  }else{
-   window.location.replace("https://apolloxy.github.io/notFound");
-  }
-  }else{
-window.location.replace("https://apolloxy.github.io/notFound.html");
-
-  }
+  if(path.endsWith("/")){path = path.slice(0, path.length-1);}
   
+  if(path.includes("/")){window.location.replace("https://apolloxy.github.io/notFound");}else{
+    if(path.startsWith("@")){
+        path = path.slice(1, 50);
+        if(path.match(`[|{}\\/~^:,;?!&%$@*+]`)){
+            window.location.replace("https://apolloxy.github.io/notFound");
+          
+          }else{
+            window.location.replace("https://apolloxy.github.io/u/?u="+ path );
+        }
+         
+  	}else{
+        window.location.replace("https://apolloxy.github.io/url/?r="+ path )
+      }
+  
+   }
 });
 </script>
 
