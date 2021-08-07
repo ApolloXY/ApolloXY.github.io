@@ -184,46 +184,6 @@ btnTwitterLogin.addEventListener('click', e =>{
 
 });
 
-var repo = new MyUserDataRepo();
-
-// Get reference to the currently signed-in user
-var prevUser = auth.currentUser;
-
-// Get the data which you will want to merge. This should be done now
-// while the app is still signed in as this user.
-var prevUserData = repo.get(prevUser);
-
-// Delete the user's data now, we will restore it if the merge fails
-repo.delete(prevUser);
-
-// Sign in user with the account you want to link to
-auth.signInWithCredential(newCredential).then((result) => {
-  console.log("Sign In Success", result);
-  var currentUser = result.user;
-  var currentUserData = repo.get(currentUser);
-
-  // Merge prevUser and currentUser data stored in Firebase.
-  // Note: How you handle this is specific to your application
-  var mergedData = repo.merge(prevUserData, currentUserData);
-
-  return prevUser.linkWithCredential(result.credential)
-    .then((linkResult) => {
-      // Sign in with the newly linked credential
-      return auth.signInWithCredential(linkResult.credential);
-    })
-    .then((signInResult) => {
-      // Save the merged data to the new user
-      repo.set(signInResult.user, mergedData);
-    });
-}).catch((error) => {
-  // If there are errors we want to undo the data merge/deletion
-  console.log("Sign In Error", error);
-  repo.set(prevUser, prevUserData);
-});
-
-
-
-
 
   auth.onAuthStateChanged(function(user) {
     if(user){
